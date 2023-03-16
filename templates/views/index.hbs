@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/weather.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" />
+    <link rel="stylesheet" href="/css/style.css" >
+    <title>Translator App</title>
+</head>
+<body>
+
+  <div class="main-content">
+      <h1>Extract Text From Image</h1>
+
+    <div class="app-functionality__container">
+        <div class="form-section">
+             <form>
+                <div class="form-group">
+                    <label for="file-input">Click to Upload Image</label>
+                    <input type="file" name="image" accept="image/*" class="form-control form-control-file" id="file-input" />
+                </div>
+                <button id="btn-submit" type="submit" class="btn btn-info btn-submit mt-3">Convert</button>
+             </form>
+             <div class="uploaded-img__container mt-4">
+            </div>
+        </div>
+        <div class="output-section">
+            <p>Extracted Text</p>
+            <br />
+            <p class="converted-text"></p>
+        </div>
+    </div>
+  </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
