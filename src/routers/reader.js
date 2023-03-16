@@ -1,4 +1,5 @@
 import path from "path";
+import fs from "fs";
 import express from "express";
 import { fileURLToPath } from "url";
 import multer from "multer";
@@ -43,6 +44,9 @@ router.post("/pdf", upload.single("file"), async (req, res) => {
       console.log("The exit code was: " + code);
       console.log("The exit signal was: " + signal);
       console.log("finished");
+      fs.unlink(filePath, (err) => {
+        if (err) throw err;
+      });
       res.json({ text: output });
     });
   } catch (error) {
